@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:property-placeholder location="classpath:briefcase.properties"/>
+
+    <bean id="itemPen"
+          class="ru.sfu.Pen">
+        <property name="inkColor" value="${itemPen.inkColor}"/>
+    </bean>
+
+    <bean id="itemNotebook"
+          class="ru.sfu.Notebook">
+        <property name="pages" value="${itemNotebook.pages}"/>
+    </bean>
+
+    <bean id="itemBook"
+          class="ru.sfu.Book">
+        <property name="name" value="${itemBook.name}"/>
+        <property name="author" value="${itemBook.author}"/>
+    </bean>
+
+    <bean id="briefcase"
+          class="ru.sfu.Briefcase">
+        <constructor-arg>
+            <list value-type="ru.sfu.Item">
+                <ref bean="itemNotebook"/>
+                <ref bean="itemPen"/>
+            </list>
+        </constructor-arg>
+        <property name="item" ref="itemBook"/>
+    </bean>
+    
+</beans>
