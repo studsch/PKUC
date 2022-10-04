@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Show</title>
+</head>
+<body>
+
+<p th:text="${bag.getId()}">VALUE</p>
+<p th:text="${bag.getMaterial()}">VALUE</p>
+<p th:text="${bag.getBrand()}">VALUE</p>
+<p th:text="${bag.getCountry()}">VALUE</p>
+<p th:text="${bag.getHeight()}">VALUE</p>
+<p th:text="${bag.getWidth()}">VALUE</p>
+<p th:text="${bag.getDepth()}">VALUE</p>
+
+<a th:href="@{/bags/{id}/edit(id=${bag.getId()})}">Edit</a>
+
+<form th:method="DELETE" th:action="@{/bags/{id}(id=${bag.getId()})}">
+    <input type="submit" value="Delete"/>
+</form>
+
+</body>
+</html>
