@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+
+    <div th:each="bag : ${bags}">
+        <a th:href="@{/bags/{id}(id=${bag.getId()})}" th:text="${bag.toString()}">bag</a>
+    </div>
+
+    <br/>
+    <hr/>
+
+    <a href="/bags/new">Create new bag</a>
+    <br/>
+    <form action="/auth/logout" method="POST">
+        <button type="submit">Logout</button>
+    </form>
+</body>
+</html>
