@@ -8,14 +8,9 @@ import org.springframework.stereotype.Service;
 
 @Service("userDetailsServiceImpl")
 public class UserDetailsServiceImpl implements UserDetailsService {
-
-//    private final
-
-    // TODO: сделать работу с юзерами и сделать регистрацию
     @Override
     public UserDetails loadUserByUsername(String s)
             throws UsernameNotFoundException {
-//        User user =
         return null;
     }
 }
