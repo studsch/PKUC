@@ -1,5 +1,5 @@
 ## Для запуска необходимо:
-- JDK 18+
+- JDK 17+
 - PostgreSQL
 - Apache Tomcat
 
