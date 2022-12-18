@@ -7,7 +7,7 @@
 Необходимо скачать репозиторий и перейти в директорию practice 8
 
 В конфигурации для запуска необходимо выбрать Application 
-(Запустить файл [src/main/java/main/config/Application.java](https://github.com/studsch/PKUC/blob/main/practice8/src/main/java/main/config/Application.java))
+(Запустить файл [Application.java](https://github.com/studsch/PKUC/blob/main/practice8/src/main/java/main/config/Application.java))
 
 ## Зависимости:
 - spring-context
