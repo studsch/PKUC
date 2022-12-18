@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<html lang="en", xmlns:th="http://thymeleaf.org">
+<html>
+<body>
+<form th:method="POST" th:action="@{/filter_show}" name="bag">
+    <fieldset>
+        <legend>Bag</legend>
+        <p>cost <input type = "number" name="cost" th:value="${cost}" id = "cost"></p>
+        <button type="submit">filter</button>
+    </Fieldset>
+</form>
+<table>
+    <caption>Bags</caption>
+    <tr>
+        <th>Id</th><th>Cost</th><th>Weight</th><th>Brand</th><th>Type</th><th>color</th>
+    </tr>
+    <div th:each="bag : ${bags}">
+        <tr>
+            <td th:text="${bag.getId()}">Id</td>
+            <td th:text="${bag.getCost()}">Cost</td>
+            <td th:text="${bag.getWeight()}">Weight</td>
+            <td th:text="${bag.getBrand()}">Brand</td>
+            <td th:text="${bag.getType()}">Type</td>
+            <td th:text="${bag.getColor()}">color</td>
+        <tr>
+</table>
+</body>
+</html>

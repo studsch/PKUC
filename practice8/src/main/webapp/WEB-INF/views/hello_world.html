@@ -1,0 +1,30 @@
+<html>
+<body>
+<h2>
+    Hello
+    <a href="/login">Login</a>
+    <a href="/registration">Registration</a>
+</h2>
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
+<ol>
+    <li>
+        <a href="http://localhost:8081/add_bag/">add bag in data</a>
+    </li>
+    <li>
+        <a href="http://localhost:8081/show_all/">show all data</a>
+    </li>
+    <li>
+        <a href="http://localhost:8081/edit_bag/">edit bag</a>
+    </li>
+    <li>
+        <a href="http://localhost:8081/delete_bag/">delete bag</a>
+    </li>
+    <li>
+        <a href="http://localhost:8081/filter_show/">display all records whose price is higher than your value</a>
+    </li>
+</ol>
+
+</body>
+</html>

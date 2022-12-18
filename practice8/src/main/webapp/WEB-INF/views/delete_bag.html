@@ -1,0 +1,13 @@
+<meta charset="UTF-8">
+<html lang="en", xmlns:th="http://thymeleaf.org">
+<html>
+<body>
+<form th:method="DELETE" th:action="@{/delete_bag}" name="bag">
+    <fieldset>
+        <legend>Bag</legend>
+        <p>id <input type = "number" name="id" th:value="${id}" id = "id"></p>
+        <button type="submit">delete</button>
+    </Fieldset>
+</form>
+</body>
+</html>

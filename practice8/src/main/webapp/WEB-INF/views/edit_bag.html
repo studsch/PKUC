@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+<html lang="en", xmlns:th="http://thymeleaf.org">
+<html>
+<body>
+<form th:method="PATCH" th:action="@{/edit_bag}" th:object="${bag}" name="bag">
+    <fieldset>
+        <legend>Bag</legend>
+        <p>id <input type = number th:field="*{id}" id = "id">
+        <div style="color: red" th:if="${#fields.hasErrors('id')}" th:errors="*{id}">Id error</div></p>
+        <p>cost <input type = number step="any" th:field="*{cost}" id = "cost">
+        <div style="color: red" th:if="${#fields.hasErrors('cost')}" th:errors="*{cost}">Id error</div></p>
+        <p>weight <input type = number step="any" th:field="*{weight}" id = "weight">
+        <div style="color: red" th:if="${#fields.hasErrors('weight')}" th:errors="*{weight}">Id error</div></p>
+        <p>brand <input type = text th:field="*{brand}" id = "brand">
+        <div style="color: red" th:if="${#fields.hasErrors('brand')}" th:errors="*{brand}">Brand error</div></p>
+        <p>type <input type = text th:field="*{type}" id = "type">
+        <div style="color: red" th:if="${#fields.hasErrors('type')}" th:errors="*{type}">Id error</div></p>
+        <p>color <input type = text th:field="*{color}" id = "color">
+        <div style="color: red" th:if="${#fields.hasErrors('color')}" th:errors="*{color}">Id error</div></p>
+        <button type="submit">update</button>
+    </Fieldset>
+</form>
+</body>
+</html>
